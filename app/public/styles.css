@@ -2,6 +2,10 @@ div #new-task{
   width:450px;
 }
 
+.container{
+  text-align: center;
+}
+
 a{
   text-decoration: none;
 }
@@ -24,6 +28,7 @@ body{
   background-color: #7D1424;
   border-color: #7D1424;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .btn:hover {
