@@ -19,9 +19,25 @@
         </div>
       </div>
       <br/><br/><br/><br/>
+      <div class="col-sm-4">
       <div id="new-task" class="container">
         <a href="/"><button type="button" class="btn btn-info btn-lg btn-block">Home</button></a>
       </div>
+    </div>
+    <br>
+    <div class="col-sm-4">
+      <div id="new-task" class="container">
+        <a href="/tasks/<%= @task.id %>/edit"><button type="button" class="btn btn-info btn-lg btn-block">Update</button></a>
+      </div>
+    </div>
+    <br>
+    <div class="col-sm-4">
+      <form action="/tasks/<%= @task.id %>/complete" method="post">
+        <input type="hidden" name="_method" value="DELETE" />
+        <br/>
+        <input value='Complete Task' type='submit'class="btn btn-lg btn-block"/>
+      </form>
+    </div>
     </div>
   </body>
 </html>

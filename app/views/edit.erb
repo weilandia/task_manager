@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="/typed.js"></script>
+    <script src="/update.js"></script>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1>
+      <main>
+      <span class="element" id="landing" style="white-space:pre"></span><br><br>
+      </main></h1>
+    </div>
+
+    <div class="container">
+      <form action="/tasks/<%= @task.id %>" method="post">
+        <input type="hidden" name="_method" value="PUT" />
+        <input type='text' name='task[title]' class="form-control" value="<%= @task.title %>"/><br />
+        <br/>
+        <textarea class="form-control" name='task[description]'><%= @task.description %></textarea><br/>
+        <input type='submit'class="btn"/>
+        <button type="button" class="btn">Back</button></a>
+      </form>
+    </div>
+  </body>
+</html>

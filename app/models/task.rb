@@ -1,7 +1,7 @@
 class Task
-  attr_reader :title,
-              :description,
-              :id
+  attr_accessor :title,
+                :description,
+                :id
 
   def initialize(data)
     @id = data["id"]
